@@ -60,6 +60,7 @@ export default function CursorFollower({ cursorPosition }: CursorFollowerProps) 
               x: cursorPosition.x - 5,
               y: cursorPosition.y - 5,
               scale: hoverElement ? 1.5 : 1,
+              opacity: 1,
             }}
             transition={{
               type: "spring",
@@ -68,7 +69,6 @@ export default function CursorFollower({ cursorPosition }: CursorFollowerProps) 
               restDelta: 0.001,
             }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <div
@@ -86,6 +86,7 @@ export default function CursorFollower({ cursorPosition }: CursorFollowerProps) 
               x: cursorPosition.x - 15,
               y: cursorPosition.y - 15,
               scale: hoverElement ? 2 : 1,
+              opacity: 0.3, 
             }}
             transition={{
               type: "spring",
@@ -95,7 +96,6 @@ export default function CursorFollower({ cursorPosition }: CursorFollowerProps) 
               delay: 0.02,
             }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.3 }}
             exit={{ opacity: 0 }}
           >
             <div
